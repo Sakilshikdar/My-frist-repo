@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .field{
+      border: chartreuse dashed ;
+      height: 570px;
+      background-image: url(images/stadium.jpg);
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size:100% 90% ;
+    }
+    .field:hover .bat{
+        transform:rotate(-60deg);
+       transform-origin: top right;
+    }
+    .bat{
+      position: relative;
+      z-index: 3;
+      transition: transform 0.5s ease-in;
+    }
+    .ball{
+      width: 40px;
+      height: 40px;
+      margin-left: 30px;
+      position: relative;
+      border-radius: 40px;
+      border-top-left-radius: calc(60px);
+      border-bottom-left-radius: calc(60px);
+      border-bottom-right-radius: calc(60px);
+      border-top-right-radius: calc(60px);
+      transition:transform 1s ease-out .4s;
+      z-index: 2;
+    }
+    .field:hover .ball{
+      transform: translate(1200px);
+    }
+  </style>
+</head>
+<body>
+  <div class="field">
+    <img class="bat" src="images/bat.png" alt="">
+    <img class="ball" src="images/ball.png" alt="">
+  </div>
+</body>
+</html>
